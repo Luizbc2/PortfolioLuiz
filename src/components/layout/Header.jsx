@@ -1,59 +1,44 @@
-import { Link, NavLink } from 'react-router-dom';
-import { useCart } from '../../context/CartContext';
-import { useSession } from '../../context/SessionContext';
+import { Link } from 'react-router-dom';
 
 const navItems = [
-  { to: '/', label: 'Inicio' },
-  { to: '/catalogo', label: 'Catalogo' },
-  { to: '/promocoes', label: 'Promocoes' },
-  { to: '/minhas-keys', label: 'Keys' },
+  { href: '/#projetos', label: 'Projetos' },
+  { href: '/#stack', label: 'Stack' },
+  { href: '/#processo', label: 'Processo' },
+  { href: '/#contato', label: 'Contato' },
 ];
 
 export const Header = () => {
-  const { itemCount } = useCart();
-  const { isAuthenticated, user, loginDemo, logoutDemo } = useSession();
-
   return (
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand-mark" to="/">
           <span className="brand-mark__signal" />
           <div>
-            <strong>Nexus Games</strong>
-            <span>storefront editorial de keys</span>
+            <strong>Luiz Barbosa</strong>
+            <span>front-end developer / portfolio</span>
           </div>
         </Link>
 
         <nav className="site-nav" aria-label="Principal">
           {navItems.map((item) => (
-            <NavLink key={item.to} to={item.to} className={({ isActive }) => `nav-link${isActive ? ' is-active' : ''}`}>
+            <a key={item.href} className="nav-link" href={item.href}>
               {item.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
 
         <div className="header-actions">
-          <Link className="header-cart" to="/carrinho">
-            Carrinho
-            <span>{itemCount}</span>
-          </Link>
-          {isAuthenticated ? (
-            <button className="session-pill" type="button" onClick={logoutDemo}>
-              <span className="session-pill__avatar">{user.fullName[0]}</span>
-              <span>
-                <strong>{user.username}</strong>
-                <small>Sair do demo</small>
-              </span>
-            </button>
-          ) : (
-            <button className="session-pill session-pill--ghost" type="button" onClick={loginDemo}>
-              <span className="session-pill__avatar">N</span>
-              <span>
-                <strong>Entrar</strong>
-                <small>Modo demo</small>
-              </span>
-            </button>
-          )}
+          <a className="header-cart" href="https://github.com/Luizbc2" target="_blank" rel="noreferrer">
+            GitHub
+            <span>01</span>
+          </a>
+          <a className="session-pill session-pill--ghost" href="https://horarius.vercel.app/login" target="_blank" rel="noreferrer">
+            <span className="session-pill__avatar">L</span>
+            <span>
+              <strong>Projeto online</strong>
+              <small>Horarius</small>
+            </span>
+          </a>
         </div>
       </div>
     </header>
