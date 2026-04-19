@@ -32,7 +32,7 @@ export const ProjectPage = () => {
           </div>
 
           <div className="portfolio-detail__section">
-            <h2>Pontos fortes</h2>
+            <h2>Resumo</h2>
             <ul className="portfolio-detail__list">
               {project.highlights.map((highlight) => (
                 <li key={highlight}>{highlight}</li>
@@ -48,6 +48,17 @@ export const ProjectPage = () => {
                   {item}
                 </span>
               ))}
+            </div>
+          </div>
+
+          <div className="portfolio-detail__section">
+            <h2>Preview do frontend</h2>
+            <div className="portfolio-detail__preview">
+              <div className="portfolio-card__preview-image portfolio-card__preview-image--large">
+                <span>{project.preview.label}</span>
+                <strong>{project.title}</strong>
+              </div>
+              <p>{project.preview.hint}</p>
             </div>
           </div>
 
@@ -67,6 +78,25 @@ export const ProjectPage = () => {
           <span className="eyebrow">Resumo</span>
           <h2>{project.callout}</h2>
           <p>{project.summary}</p>
+
+          <div className="portfolio-detail__section">
+            <h3>Status</h3>
+            <p>{project.liveStatus === 'online' ? 'Deploy confirmado online.' : 'Deploy atualmente fora do ar ou retornando pagina nao encontrada.'}</p>
+            <p>{project.repoLabel}</p>
+          </div>
+
+          <div className="portfolio-detail__actions portfolio-detail__actions--stacked">
+            {project.liveUrl ? (
+              <Button as="a" href={project.liveUrl} target="_blank" rel="noreferrer" variant="secondary">
+                {project.liveStatus === 'online' ? 'Abrir projeto publicado' : 'Ver link informado'}
+              </Button>
+            ) : null}
+            {project.repoUrl ? (
+              <Button as="a" href={project.repoUrl} target="_blank" rel="noreferrer">
+                Ver repositorio no GitHub
+              </Button>
+            ) : null}
+          </div>
 
           <div className="portfolio-detail__section">
             <h3>Projetos relacionados</h3>

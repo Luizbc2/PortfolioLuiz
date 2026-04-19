@@ -1,146 +1,141 @@
+import cashflowPreview from '../assets/previews/cashflow.jpeg';
+import louisDealsPreview from '../assets/previews/louisdeals.jpeg';
+import horariusPreview from '../assets/previews/horarius.jpeg';
+import nisMelloPreview from '../assets/previews/nismello.jpeg';
+
 export const portfolioOwner = {
-  fullName: 'Luiz Barbosa',
+  fullName: 'Luiz Otávio',
   shortName: 'Luiz',
-  role: 'Front-end Developer',
+  role: 'Full Stack Developer',
   location: 'Brasil',
-  headline: 'Interfaces com cara de produto real, nao de template generico.',
+  headline: 'Olá, mundo. Esse é meu portfólio com projetos acadêmicos que desenvolvi até o momento. Desce a página e dá uma olhada.',
   summary:
-    'Sou desenvolvedor front-end focado em transformar ideia em interface publica, organizada e pronta para deploy. Trabalho com React, Vite, Node e integrações reais para construir paginas, paineis e fluxos que ficam bonitos e funcionam de verdade.',
-  availability: 'Disponivel para freelance, portfolio builds e oportunidades front-end.',
+    'Sou desenvolvedor full stack e uso este portfólio para mostrar projetos que já foram publicados, com stack clara, links funcionando e uma visão direta do que foi construído.',
+  availability: 'Disponível para oportunidades em tecnologia.',
   githubUrl: 'https://github.com/Luizbc2',
   primaryCta: { label: 'Ver projetos', href: '#projetos' },
-  secondaryCta: { label: 'Abrir Horarius online', href: 'https://horarius.vercel.app/login' },
+  secondaryCta: { label: 'Sobre mim', href: '#sobre' },
   metrics: [
-    { label: 'Projetos em destaque', value: '4 entregas' },
-    { label: 'Stack principal', value: 'React + Node' },
-    { label: 'Deploy real', value: 'Vercel + Supabase' },
+    { label: 'Projetos publicados', value: '4' },
+    { label: 'Perfil', value: 'Full Stack' },
   ],
 };
 
 export const focusAreas = [
   {
-    title: 'Landing pages e portfolio',
-    description: 'Experiencias visuais fortes, mobile-first e com narrativa clara para apresentar produto ou profissional.',
+    title: 'Frontend',
+    description: 'Interfaces responsivas, organizadas e prontas para uso real.',
   },
   {
-    title: 'Painel interno e CRUD',
-    description: 'Fluxos autenticados com listagens, filtros, formularios, estados vazios e regras de isolamento por conta.',
+    title: 'Backend',
+    description: 'APIs, autenticação e estrutura de dados para sustentar o produto.',
   },
   {
-    title: 'Publicacao e deploy',
-    description: 'Configuracao de Vercel, variaveis de ambiente, banco Postgres e integracao entre frontend e backend.',
+    title: 'Publicação',
+    description: 'Deploy, ajuste final e entrega pronta para abrir no navegador.',
   },
 ];
 
 export const stackGroups = [
   {
     title: 'Frontend',
-    items: ['React', 'Vite', 'React Router', 'CSS customizado', 'UI system', 'Responsividade'],
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
   },
   {
     title: 'Backend',
-    items: ['Node.js', 'Express', 'TypeScript', 'JWT', 'Sequelize', 'REST API'],
+    items: ['Node.js', 'PHP', 'Laravel', 'Blade'],
   },
   {
-    title: 'Infra',
-    items: ['Vercel', 'Supabase Postgres', 'GitHub', 'Deploy config', 'Env vars', 'Monorepo'],
-  },
-];
-
-export const processSteps = [
-  {
-    title: 'Entender o objetivo',
-    description: 'Comeco pelo que a pagina ou sistema precisa provar: venda, demonstracao, cadastro, painel ou apresentacao pessoal.',
-  },
-  {
-    title: 'Construir com clareza visual',
-    description: 'Organizo hierarquia, secoes, CTA e ritmo da interface para a navegacao ficar simples sem perder personalidade.',
-  },
-  {
-    title: 'Subir e validar',
-    description: 'Nao paro no layout. Fecho deploy, variaveis, conexao com API e uma rodada de validacao para o projeto ficar apresentavel.',
+    title: 'Banco e deploy',
+    items: ['MySQL', 'SQLite', 'PostgreSQL', 'Supabase', 'Vercel', 'GitHub'],
   },
 ];
 
 export const projects = [
   {
     slug: 'horarius-web',
-    title: 'Horarius Web',
-    category: 'Full stack / agenda',
+    title: 'Horarius',
+    category: 'Sistema web',
     year: '2026',
-    summary:
-      'Sistema de agenda com autenticacao, cadastro de clientes, servicos, profissionais e visao separada por conta.',
+    summary: 'Sistema de agenda com login, painel e gerenciamento de clientes, serviços e profissionais.',
     description:
-      'O Horarius nasceu para organizar operacao de atendimento em um painel unico. A entrega inclui login, CRUDs autenticados, agenda e deploy publico integrado a backend Node e banco Postgres.',
-    impact:
-      'Projeto completo para demonstrar fluxo de produto real: interface, backend, banco, publicacao e correcoes de deploy em producao.',
-    stack: ['React', 'Vite', 'Node.js', 'Express', 'Sequelize', 'Supabase', 'Vercel'],
-    highlights: [
-      'Login e autenticacao por token',
-      'Clientes, profissionais, servicos e agenda por usuario',
-      'Deploy frontend + backend + banco',
-    ],
+      'Projeto full stack com foco em organização de agenda e operação do dia a dia. Foi pensado como sistema real, com autenticação, fluxo interno e deploy publicado. Dá para criar uma conta ou entrar com o acesso padrão: admin@horarius.com / 123456.',
+    impact: 'Mostra bem meu lado full stack, principalmente em sistemas com login, regras de uso e estrutura de produto.',
+    stack: ['React', 'Node.js', 'PostgreSQL'],
+    highlights: ['Autenticação', 'Painel interno', 'CRUD completo'],
     liveUrl: 'https://horarius.vercel.app/login',
-    callout: 'Projeto que mostra capacidade de sair do layout e chegar ate a publicacao.',
+    repoUrl: 'https://github.com/Luizbc2/Horarius',
+    repoLabel: 'Repositório público no GitHub',
+    liveStatus: 'online',
+    preview: {
+      src: horariusPreview,
+      alt: 'Preview do sistema Horarius',
+    },
+    callout: 'Projeto full stack com fluxo real de sistema.',
   },
   {
-    slug: 'horarius-api',
-    title: 'Horarius API',
-    category: 'Backend / API',
-    year: '2026',
-    summary:
-      'API REST para autenticacao e operacao do painel Horarius, com JWT, PostgreSQL e isolamento de dados por usuario.',
+    slug: 'nis-mello-atelie',
+    title: 'Nis Mello Atelie',
+    category: 'Site institucional',
+    year: '2025',
+    summary: 'Site para ateliê com apresentação da marca, catálogo, contato e identidade visual delicada.',
     description:
-      'Backend estruturado em modulos para suportar autenticação, usuarios, clientes, servicos, profissionais e agendamentos com regras de ownership.',
-    impact:
-      'Demonstra dominio de API, configuracao de ambiente, modelagem relacional e correcoes de runtime em deploy serverless.',
-    stack: ['Node.js', 'Express', 'TypeScript', 'JWT', 'Sequelize', 'PostgreSQL'],
-    highlights: [
-      'Rotas autenticadas com validacao',
-      'Repositorios escopados por userId',
-      'Ajustes de runtime para Vercel',
-    ],
-    liveUrl: 'https://horarius-backend.vercel.app/api/health',
-    callout: 'Back-end publicado e conectado a banco real.',
+      'Projeto institucional focado em apresentar a marca de forma clara e bonita, com navegação simples e canais diretos de contato.',
+    impact: 'Mostra uma entrega voltada para negócio real, com foco em apresentação e presença online.',
+    stack: ['PHP', 'HTML', 'CSS', 'JavaScript'],
+    highlights: ['Home institucional', 'Contato direto', 'Apresentação da marca'],
+    liveUrl: 'https://nismelloatelie.vercel.app/',
+    repoUrl: 'https://github.com/Luizbc2/NisMelloAtelie',
+    repoLabel: 'Repositório público no GitHub',
+    liveStatus: 'online',
+    preview: {
+      src: nisMelloPreview,
+      alt: 'Preview do site Nis Mello Atelie',
+    },
+    callout: 'Projeto voltado para marca, apresentação e contato.',
   },
   {
-    slug: 'nexus-games',
-    title: 'Nexus Games',
-    category: 'Interface / storefront concept',
+    slug: 'louis-deals',
+    title: 'LouisDeals',
+    category: 'Catálogo web',
     year: '2026',
-    summary:
-      'Conceito de storefront editorial para jogos digitais com identidade visual forte, cards, destaque principal e narrativa de marca.',
+    summary: 'Catálogo de produtos com busca por código, filtros e cards com link direto para compra.',
     description:
-      'Projeto visual criado para estudar composicao de vitrine, pagina de produto, sistema de secoes e atmosfera de marca em um layout mais ousado.',
-    impact:
-      'Mostra meu lado de interface: contraste, direcao visual, ritmo de landing page e componentizacao para escalar a home e os cards.',
-    stack: ['React', 'Vite', 'React Router', 'CSS', 'Componentes reutilizaveis'],
-    highlights: [
-      'Hero interativo com movimento',
-      'Cards e secoes editoriais reaproveitaveis',
-      'Base que estou convertendo para este portfolio',
-    ],
-    callout: 'Projeto de design e produto que virou base para meu site pessoal.',
+      'Projeto com foco em vitrine digital, pesquisa rápida e organização de itens por categoria, com visual mais moderno.',
+    impact: 'Ajuda a mostrar trabalho com catálogo, filtragem e interface mais atual.',
+    stack: ['Next.js', 'React', 'TypeScript'],
+    highlights: ['Busca por código', 'Filtros', 'Cards de produto'],
+    liveUrl: 'https://louisdeals-nine.vercel.app/',
+    repoUrl: 'https://github.com/Luizbc2/louisdeals',
+    repoLabel: 'Repositório público no GitHub',
+    liveStatus: 'online',
+    preview: {
+      src: louisDealsPreview,
+      alt: 'Preview do projeto LouisDeals',
+    },
+    callout: 'Projeto focado em vitrine, busca e navegação simples.',
   },
   {
-    slug: 'portfolio-luiz',
-    title: 'Portfolio Luiz',
-    category: 'Marca pessoal / web',
-    year: '2026',
-    summary:
-      'Meu site pessoal para apresentar projetos, stack, processo de trabalho e capacidade de publicar interfaces completas.',
+    slug: 'cashflow',
+    title: 'Cashflow',
+    category: 'Sistema financeiro',
+    year: '2025',
+    summary: 'Projeto de sistema financeiro com autenticação e estrutura separada entre frontend e backend.',
     description:
-      'Usei a base visual da Nexus Games para criar uma identidade mais profissional, centralizar meus melhores trabalhos e deixar um portfolio facil de navegar.',
-    impact:
-      'Serve como vitrine do meu processo: analise, adaptacao de layout existente, componentizacao e deploy orientado a portfolio.',
-    stack: ['React', 'Vite', 'CSS', 'Data-driven UI', 'Vercel'],
-    highlights: [
-      'Home orientada a portfolio',
-      'Pagina de detalhe para projeto',
-      'Dados centralizados para atualizacao rapida',
-    ],
-    callout: 'Projeto vivo que posso ir evoluindo conforme publico mais trabalhos.',
+      'Projeto colaborativo com base pública confirmada no GitHub. O link publicado funciona e o repositório mostra a estrutura do sistema. Quando o deploy está ativo, o acesso de teste é admin@cashflow.com / 123456.',
+    impact: 'Reforça minha participação em projetos de sistema com autenticação e organização por camadas.',
+    stack: ['TypeScript', 'PHP', 'Laravel', 'Blade', 'CSS'],
+    highlights: ['Login', 'Estrutura frontend/backend', 'Projeto colaborativo'],
+    liveUrl: 'https://cashflow-gbrg.vercel.app/',
+    repoUrl: 'https://github.com/cardealpauloand/cash_flow',
+    repoLabel: 'Repositório público fora do meu GitHub',
+    liveStatus: 'online',
+    preview: {
+      src: cashflowPreview,
+      alt: 'Preview do dashboard do Cashflow',
+    },
+    callout: 'Projeto colaborativo com foco em sistema financeiro.',
   },
 ];
 
-export const featuredProjects = projects.slice(0, 3);
+export const featuredProjects = projects;
