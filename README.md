@@ -9,7 +9,7 @@ Portfólio pessoal desenvolvido para apresentar projetos acadêmicos reais, stac
 
 ## Preview
 
-![Preview do portfólio](./src/assets/previews/horarius.jpeg)
+![Preview do portfólio](./public/portfolio-readme-preview.jpeg)
 
 ## O que tem no site
 
