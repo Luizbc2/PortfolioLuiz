@@ -54,11 +54,8 @@ export const ProjectPage = () => {
           <div className="portfolio-detail__section">
             <h2>Preview do frontend</h2>
             <div className="portfolio-detail__preview">
-              <div className="portfolio-card__preview-image portfolio-card__preview-image--large">
-                <span>{project.preview.label}</span>
-                <strong>{project.title}</strong>
-              </div>
-              <p>{project.preview.hint}</p>
+              <img className="portfolio-preview__image" src={project.preview.src} alt={project.preview.alt} />
+              <p>{project.summary}</p>
             </div>
           </div>
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../shared/Button';
 
 export const ProjectCard = ({ project }) => (
@@ -10,7 +11,11 @@ export const ProjectCard = ({ project }) => (
     <div className="portfolio-card__body">
       <div className="section-heading">
         <span className="eyebrow">Projeto</span>
-        <h3>{project.title}</h3>
+        <h3>
+          <Link className="portfolio-card__link" to={`/projetos/${project.slug}`}>
+            {project.title}
+          </Link>
+        </h3>
       </div>
 
       <p>{project.summary}</p>
@@ -33,6 +38,9 @@ export const ProjectCard = ({ project }) => (
     </div>
 
     <div className="portfolio-card__actions">
+      <Button as={Link} to={`/projetos/${project.slug}`} variant="secondary">
+        Detalhes
+      </Button>
       {project.repoUrl ? (
         <Button as="a" href={project.repoUrl} target="_blank" rel="noreferrer">
           Repositório

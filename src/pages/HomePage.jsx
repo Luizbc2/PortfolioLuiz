@@ -60,7 +60,11 @@ export const HomePage = () => {
               <TerminalLine delay={1} prompt="$" text="whoami" />
               <TerminalLine delay={2} text="Luiz Otávio / Full Stack Developer / Brasil" output />
               <TerminalLine delay={3} prompt="$" text="cat about.txt" />
-              <TerminalLine delay={4} text={portfolioOwner.headline} output highlight />
+              <HeroIntro
+                delay={4}
+                greeting={portfolioOwner.greeting}
+                text={portfolioOwner.intro}
+              />
               <TerminalLine delay={5} prompt="$" text="ls stack/" />
               <TerminalLine delay={6} text="React  Node.js  PHP  Laravel  MySQL  PostgreSQL  GitHub" output />
               <TerminalLine delay={7} prompt="$" text="status --portfolio" />
@@ -186,5 +190,21 @@ const TerminalLine = ({ prompt, text, output = false, highlight = false, delay =
   >
     {prompt ? <span className="portfolio-terminal__prompt">{prompt}</span> : null}
     <span>{text}</span>
+  </div>
+);
+
+const HeroIntro = ({ greeting, text, delay = 0 }) => (
+  <div className="portfolio-terminal__intro" style={{ '--terminal-delay': `${delay * 180}ms` }}>
+    <span className="portfolio-terminal__intro-tag">printf("hello world");</span>
+    <div className="portfolio-glitch" aria-label={greeting}>
+      <span className="portfolio-glitch__layer portfolio-glitch__layer--cyan" aria-hidden="true">
+        {greeting}
+      </span>
+      <strong className="portfolio-glitch__text">{greeting}</strong>
+      <span className="portfolio-glitch__layer portfolio-glitch__layer--amber" aria-hidden="true">
+        {greeting}
+      </span>
+    </div>
+    <p className="portfolio-terminal__intro-text">{text}</p>
   </div>
 );

@@ -8,7 +8,9 @@ export const portfolioOwner = {
   shortName: 'Luiz',
   role: 'Full Stack Developer',
   location: 'Brasil',
-  headline: 'Olá, mundo. Esse é meu portfólio com projetos acadêmicos que desenvolvi até o momento. Desce a página e dá uma olhada.',
+  greeting: 'Olá Mundo',
+  intro:
+    'Esse é meu portfólio com projetos acadêmicos que desenvolvi até o momento. Abaixo você pode conferir meus projetos e minha stack.',
   summary:
     'Sou desenvolvedor full stack e uso este portfólio para mostrar projetos que já foram publicados, com stack clara, links funcionando e uma visão direta do que foi construído.',
   availability: 'Disponível para oportunidades em tecnologia.',
