@@ -3,7 +3,6 @@
 [![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react&logoColor=06141b)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-7-8b5cf6?style=for-the-badge&logo=vite&logoColor=ffffff)](https://vite.dev/)
 [![React Router](https://img.shields.io/badge/React_Router-7-ca4245?style=for-the-badge&logo=reactrouter&logoColor=ffffff)](https://reactrouter.com/)
-[![GitHub Repo](https://img.shields.io/badge/Reposit%C3%B3rio-GitHub-7dffb7?style=for-the-badge&logo=github&logoColor=0b1510&labelColor=0b1510)](https://github.com/Luizbc2/PortfolioLuiz)
 
 Portfólio pessoal desenvolvido para apresentar projetos acadêmicos reais, stack utilizada em cada entrega e links publicados. O foco do site é mostrar meu perfil como desenvolvedor full stack de forma direta, com visual próprio e navegação simples.
 
